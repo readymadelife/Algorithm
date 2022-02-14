@@ -1,41 +1,39 @@
 import sys
-from itertools import combinations
+import heapq
 
 input = sys.stdin.readline
 
-g, s = map(int, input().split())
+A = int(input())
+B = int(input())
 
-guitar = []
+visited = [0] * (A + 1)
 
-for _ in range(g):
-    a, b = map(str, input().split(" "))
+lines = [[] for _ in range(A+1)]
+heap = [[0, 1]]
 
-    b = b.replace('Y', '1')
-    b = b.replace('N', '0')
-    b = int(b, 2)
-    guitar.append(b)
-    
-answer = 1000000
-count = 0
+for _ in range(B):
+    a, b, c = map(int, input().split())
+    lines[a].append([c, b])
+    lines[b].append([c, a])
 
-for i in range(1, g + 1):
-    tmp = list(combinations(guitar, i))
-    for combi in tmp:
-        a = "0b0"
-        for _ in combi:
-            a = bin(int(a, 2) | _)
+
+answer = 0
+
+cnt = 0
+
+while heap:
+    if cnt == A:
+        break
+
+    print(heap)
+
+    a, b = heapq.heappop(heap)
+    if visited[b] != 1:
+        visited[b] = 1
+        answer += a
+        cnt += 1
         
-        count_a = a.count("1")
-        if count_a > count:
-            count = count_a
-            answer = i
-        
-        if count_a == count:
-            if i < answer:
-                answer = i
+        for i in lines[b]:
+            heapq.heappush(heap, i)
 
-if count == 0:
-    print(-1)
-
-else:
-    print(answer)
+print(answer)

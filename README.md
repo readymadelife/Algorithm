@@ -6,3 +6,4 @@
 |:---:|:---:|:---:|:---:|
 |1253|좋다|투포인터|[백준 : 좋다](https://www.acmicpc.net/problem/1253)|
 |1497|기타콘서트|비트마스킹|[백준 : 기타콘서트](https://www.acmicpc.net/problem/1497)|
+|1922|네트워크 연결|최소 스패닝 트리|[백준 : 네트워크 연결](https://www.acmicpc.net/problem/1922)|
