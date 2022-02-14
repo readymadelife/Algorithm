@@ -5,3 +5,4 @@
 |No.|Name|Algorithm|site|
 |:---:|:---:|:---:|:---:|
 |1253|좋다|투포인터|[백준 : 좋다](https://www.acmicpc.net/problem/1253)|
+|1497|기타콘서트|비트마스킹|[백준 : 기타콘서트](https://www.acmicpc.net/problem/1497)|
