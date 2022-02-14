@@ -4,4 +4,4 @@
 ## 알고리즘 문제 목록
 |No.|Name|Algorithm|site|
 |:---:|:---:|:---:|:---:|
-|1253|좋다|투포인터|[좋다]: https://www.acmicpc.net/problem/1253|
+|1253|좋다|투포인터|[좋다](https://www.acmicpc.net/problem/1253)|
